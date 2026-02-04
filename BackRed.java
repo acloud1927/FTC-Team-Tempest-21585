@@ -105,19 +105,19 @@ public class BackRed extends LinearOpMode
             
             new Thread(() -> {
                 robot.drive(10, 1, 0);
-                robot.turnTuah(-19, 1, 0);
+                robot.turn(-19, 1, 0);
             }).start();
 
             ShootingSequence(1530); //1570
 
-            robot.turnTuah(90, 1, 0);
+            robot.turn(90, 1, 0);
             robot.strafe(-15, 0.5, 0);
 
             intake.setVelocity(1550);
             robot.drive(-44, 0.35, 1);
             robot.drive(42, 1, 0);
             intake.setVelocity(0);
-            robot.turnTuah(-23, 1, 0);
+            robot.turn(-23, 1, 0);
 
             new Thread(() -> {
                 intake.setPower(-1);
@@ -125,7 +125,7 @@ public class BackRed extends LinearOpMode
                 intake.setPower(0);
                 ShootingSequence(1490);  //1500
                 robot.drive(30, 1, 0);
-                robot.turnTuah(90, 1, 0);
+                robot.turn(90, 1, 0);
             }).start();
 
             robot.drive(-12, 1, 0);
